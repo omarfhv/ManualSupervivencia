@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.heisenbergtao.manualsupervivencia">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/manual1"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/manual1"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Recaida"></activity>
+        <activity android:name=".ModificacionesC" />
+        <activity android:name=".Tabulador" />
+        <activity android:name=".CursosTecnicos" />
+        <activity android:name=".Nutricion" />
+        <activity android:name=".CursoBiblio" />
+        <activity android:name=".CursoMedico" />
+        <activity android:name=".PostEnfermeria" />
+        <activity android:name=".TecnicoEnfermeria" />
+        <activity android:name=".Cursos" />
+        <activity android:name=".InfoPases" />
+        <activity android:name=".Roluno" />
+        <activity android:name=".Rol2019" />
+        <activity android:name=".TramiteJubilacion" />
+        <activity android:name=".Contratoss" />
+        <activity android:name=".Reintegros" />
+        <activity android:name=".Festivos" />
+        <activity android:name=".Incapacidades" />
+        <activity android:name=".SeguroFacultativo" />
+        <activity android:name=".Caja" />
+        <activity android:name=".Faltas" />
+        <activity android:name=".PliegoTestamentario" />
+        <activity
+            android:name=".Vacasiones"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Licencia" />
+        <activity android:name=".TxtSustis" />
+        <activity android:name=".Pases" />
+        <activity android:name=".ContratoColectivo" />
+        <activity android:name=".MenuPrincipal" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-9129010539844350~2654062237" />
+    </application>
+
+</manifest>

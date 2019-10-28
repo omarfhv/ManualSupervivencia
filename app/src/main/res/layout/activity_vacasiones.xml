@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="60dp">
+
+
+    <TableLayout
+        android:id="@+id/Tabla"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="3" >
+
+
+        <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" A.	Aplicable en todo tipo de vacaciones y opciones (Marcas de inclusión 0,1,2,3,4,5,6,9)"
+        android:textColor="#E90C0C"
+        android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" B.	Aplicable en periodos fraccionados (Marcas de inclusión 1,4,9, de 20 años con marca 0)"
+            android:textColor="#E90C0C"
+            android:textStyle="bold" />
+
+
+
+        <TableRow
+        android:id="@+id/Cabecera"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/ColumnaAnio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5px"
+            android:text=" MCA.INC."
+            android:textColor="#005500"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ColumnaCiudad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="5px"
+            android:text="DESCRIPCION"
+            android:textColor="#005500"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ColumnaOro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="3px"
+            android:gravity="center"
+            android:text="CIERRA CICLO"
+            android:textColor="#005500"
+            android:textSize="20sp" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/SeparadorCabecera"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <FrameLayout
+            android:id="@+id/LineaCabecera"
+            android:layout_width="fill_parent"
+            android:layout_height="2px"
+            android:layout_span="6"
+            android:background="#FFFFFF" >
+        </FrameLayout>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/Fila1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/Anio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="#F44336"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Cuidad1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#F44336"
+
+            android:text="Disfrute continuo hasta 20 días, con \n pago de concepto 48 (COMPLETO)."
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Oro1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#F44336"
+
+            android:text="Sin dato. Disfruta \nlos  2 periodos."
+            android:textSize="15sp" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/Fila2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/Anio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#E91E63"
+
+            android:text="1"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Cuidad2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#E91E63"
+
+            android:text="Disfrute 1° fracción, hasta 10 días, \n con pago de concepto 48 (50%)."
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Oro2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#E91E63"
+
+            android:text="Con 1. En 2° fracción con \n  pago de concepto 48 (50%)"
+            android:textSize="15sp" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/Fila3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/Anio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="#9C27B0"
+
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Cuidad3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#9C27B0"
+
+            android:text="Disfrute hasta 20 días del 1° \n periodo, sin pago del concepto 48."
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Oro3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#9C27B0"
+
+            android:text="Con 3. En 2° periodo, sin\n pago de concepto 48."
+            android:textSize="15sp" />
+
+
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/Fila4"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/Anio4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#3F51B5"
+
+            android:text="3"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Cuidad4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#3F51B5"
+
+            android:text="Disfrute de hasta 15 días del 2° \n periodo, sin pago de concepto 48."
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Oro4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#3F51B5"
+
+            android:text="Sin dato. Cierra ciclo."
+            android:textSize="15sp" />
+
+    </TableRow>
+
+
+    <TableRow
+        android:id="@+id/Fila5"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/Anio5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#00BCD4"
+
+            android:text="4"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/Cuidad5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#00BCD4"
+
+            android:text="Disfrute 1° fracción, hasta 10 días, \n con pago de concepto 48 (Completo)."
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Oro5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#00BCD4"
+
+            android:text="Con 9. En 2° fracción sin\n  pago de concepto 48."
+            android:textSize="15sp" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/Fila6"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/Anio6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FF9800"
+
+            android:text="5"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/Cuidad6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FF9800"
+
+            android:text="Disfrute del periodo 2 o 3,\n sin pago del concepto 48."
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Oro6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#FF9800"
+
+            android:text="Con 5. En segundo y tercer \nperiodo sin pago de concepto 48."
+            android:textSize="15sp" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/Fila7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/Anio7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#CFBE28"
+
+            android:text="9"
+            android:textSize="15sp" />
+
+
+        <TextView
+            android:id="@+id/Cuidad7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#CFBE28"
+
+            android:text="Disfrute 1° fracción, hasta 10\n días, sin pago de concepto 48."
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/Oro7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#CFBE28"
+
+            android:text="Con 4. 2° fracción con \npago de concepto 48."
+            android:textSize="15sp" />
+
+
+    </TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Periodos de 20 años"
+            android:textColor="#243EE7"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" El primer periodo de 20 años debe encontrarse vencido para solicitar su programación."
+            android:textColor="#243EE7"
+            android:textStyle="bold" />
+
+        <TableRow
+            android:id="@+id/Fila8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/ColumnaAnio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5px"
+                android:text=" MCA.INC."
+
+                android:textColor="#8BC34A"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/ColumnaCiudad1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5px"
+                android:text="DESCRIPCION"
+                android:textColor="#8BC34A"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+
+
+        <TableRow
+            android:id="@+id/Fila9"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/Anio9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="0"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/Cuidad9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+
+                android:text="Disfrute de 10 días con pago de concepto 48 (10 días)."
+                android:textSize="15sp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/Fila10"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/Anio10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#EC6695"
+
+                android:text="6"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/Cuidad10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#EC6695"
+
+                android:text="Disfrute de 15 días sin pago de concepto 48."
+                android:textSize="15sp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/Fila11"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/Anio11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#6800FF"
+
+                android:text="7"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/Cuidad11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#6800FF"
+
+                android:text="Pago de concepto 48. Completo sin disfrute."
+                android:textSize="15sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Fila12"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/Anio12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#03A9F4"
+
+                android:text="8"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/Cuidad12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="#03A9F4"
+
+                android:text="Acumulación de antigüedad para jubilación con 30 días."
+                android:textSize="15sp" />
+
+        </TableRow>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" *NOTA: No debe de el disfrute mas de 120 dias a su vencimiento"
+            android:textColor="#243EE7"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" *La marca de inclusion7, debe de estar enlazado con el disfrute \n  de un periodo ordinario, con excepción del primer periodo de 20 años, el cual \n  se podrá programar posterior a la fecha de haber adquirido el derecho."
+            android:textColor="#FF9800"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" **Para la programación con marca de inclusión 8, el periodo debe encontrarse vencido."
+            android:textColor="#FF9800"
+            android:textStyle="bold" />
+
+</TableLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

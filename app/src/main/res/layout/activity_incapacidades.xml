@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E61313"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txtinca"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LOS DOCUMENTOS VARIAN POR UNIDAD MEDICA"
+        android:textColor="#FFFEFE"
+        android:textSize="20dp"
+        android:gravity="center"
+        ></TextView>
+    <Button
+        android:id="@+id/btnrecaida"
+        android:layout_below="@+id/txtinca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="RECAIDA"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:onClick="onClick"
+        android:background="@drawable/botonblanco"
+        android:textColor="#E61313"
+
+        ></Button>
+
+
+    <com.github.barteksc.pdfviewer.PDFView
+        android:layout_below="@+id/btnrecaida"
+        android:id="@+id/pdfView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        >
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView1"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            ads:adSize="SMART_BANNER"
+            ads:adUnitId="@string/admobmanual" />
+
+    </com.github.barteksc.pdfviewer.PDFView>
+
+</RelativeLayout>
