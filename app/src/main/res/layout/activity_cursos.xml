@@ -93,13 +93,14 @@
                     android:layout_margin="20dp"
                     android:background="@drawable/boton_principal"
                     android:gravity="center"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:onClick="Nutri">
 
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:onClick="Nutri"
+
 
                         android:background="@drawable/dieta" />
 
@@ -119,6 +120,7 @@
                     android:layout_margin="20dp"
                     android:background="@drawable/boton_principal"
                     android:gravity="center"
+                    android:onClick="MedicinaFam"
                     android:orientation="vertical">
 
                     <ImageView
@@ -127,7 +129,7 @@
                         android:layout_gravity="center"
                         android:background="@drawable/beca"
 
-                        android:onClick="MedicinaFam" />
+                         />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -158,13 +160,14 @@
                     android:layout_margin="20dp"
                     android:background="@drawable/boton_principal"
                     android:gravity="center"
+                    android:onClick="Postecnico"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:onClick="Postecnico"
+
                         android:background="@drawable/enferpost" />
 
                     <TextView
@@ -185,6 +188,7 @@
                     android:layout_margin="20dp"
                     android:background="@drawable/boton_principal"
                     android:gravity="center"
+                    android:onClick="Biblios"
                     android:orientation="vertical">
 
                     <ImageView
@@ -193,7 +197,7 @@
                         android:layout_gravity="center"
                         android:background="@drawable/bibliote"
 
-                        android:onClick="Biblios" />
+                         />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -213,13 +217,14 @@
                     android:layout_margin="20dp"
                     android:background="@drawable/boton_principal"
                     android:gravity="center"
+                    android:onClick="Tecnicos"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:onClick="Tecnicos"
+
 
                         android:background="@drawable/tecni" />
 
