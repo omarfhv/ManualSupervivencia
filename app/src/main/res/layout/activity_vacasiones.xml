@@ -104,11 +104,11 @@
         <TextView
             android:id="@+id/Cuidad1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
-            android:textColor="#F44336"
-
             android:text="Disfrute continuo hasta 20 días, con \n pago de concepto 48 (COMPLETO)."
+
+            android:textColor="#F44336"
             android:textSize="15sp" />
 
         <TextView
@@ -415,7 +415,7 @@
 
             <TextView
                 android:id="@+id/Cuidad9"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
 
@@ -484,17 +484,17 @@
 
         <TableRow
             android:id="@+id/Fila12"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content" >
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <TextView
                 android:id="@+id/Anio12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#03A9F4"
-
                 android:text="8"
+
+                android:textColor="#03A9F4"
                 android:textSize="15sp" />
 
 
@@ -503,9 +503,9 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:textColor="#03A9F4"
-
                 android:text="Acumulación de antigüedad para jubilación con 30 días."
+
+                android:textColor="#03A9F4"
                 android:textSize="15sp" />
 
         </TableRow>
