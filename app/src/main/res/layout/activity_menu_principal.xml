@@ -145,6 +145,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="SEGURO FACULTATIVO"
+                        android:gravity="center"
                         android:textColor="#ffffff"
                         android:textStyle="bold" />
 
@@ -348,12 +349,13 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
+                        android:alpha="0"
                         android:background="@drawable/reinte" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="REINTEGROS"
+                        android:text="proximamente"
                         android:textAlignment="center"
                         android:textColor="#ffffff"
                         android:textStyle="bold" />

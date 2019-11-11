@@ -36,13 +36,14 @@
                     android:layout_margin="20dp"
                     android:background="@drawable/boton_principal"
                     android:gravity="center"
+                    android:onClick="Tecnico"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:onClick="Tecnico"
+
 
 
                         android:background="@drawable/enfertec" />
@@ -66,13 +67,14 @@
                     android:layout_margin="20dp"
                     android:background="@drawable/boton_principal"
                     android:gravity="center"
+                    android:onClick="Medicos"
                     android:orientation="vertical">
 
                     <ImageView
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:onClick="Medicos"
+
 
                         android:background="@drawable/curmedico" />
 
@@ -100,8 +102,6 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-
-
                         android:background="@drawable/dieta" />
 
                     <TextView
@@ -224,8 +224,6 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-
-
                         android:background="@drawable/tecni" />
 
                     <TextView
