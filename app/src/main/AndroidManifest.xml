@@ -16,6 +16,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".AnoMas"></activity>
+        <activity android:name=".AnoCinco" />
+        <activity android:name=".AnoCuatro" />
+        <activity android:name=".Anotres" />
+        <activity android:name=".Anodos" />
+        <activity android:name=".AnoUno" />
         <activity android:name=".Recaida" />
         <activity android:name=".ModificacionesC" />
         <activity android:name=".Tabulador" />
@@ -38,9 +44,7 @@
         <activity android:name=".Caja" />
         <activity android:name=".Faltas" />
         <activity android:name=".PliegoTestamentario" />
-        <activity
-            android:name=".Vacasiones"
-            android:screenOrientation="landscape" />
+        <activity android:name=".Vacasiones" />
         <activity android:name=".Licencia" />
         <activity android:name=".TxtSustis" />
         <activity android:name=".Pases" />

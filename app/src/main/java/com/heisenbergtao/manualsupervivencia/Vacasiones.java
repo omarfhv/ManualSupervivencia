@@ -8,8 +8,18 @@ import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.LinearLayout;
 
-public class Vacasiones extends AppCompatActivity {
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
+public class Vacasiones extends AppCompatActivity implements View.OnClickListener{
+
+    LinearLayout botonanouno,botonanodos,botonanotres, botonanocuatro, botonanocinco,
+            botonanomascinco;
+
+    private AdView mAdView;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +34,87 @@ public class Vacasiones extends AppCompatActivity {
 
         setContentView(R.layout.activity_vacasiones);
 
+        mAdView = findViewById(R.id.adView1);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+
+
+        botonanouno = findViewById(R.id.botonanouno);
+        botonanouno.setOnClickListener(this);
+
+
+        botonanodos = findViewById(R.id.botonanodos);
+        botonanodos.setOnClickListener(this);
+
+
+        botonanotres = findViewById(R.id.botonanotres);
+        botonanotres.setOnClickListener(this);
+
+
+        botonanocuatro = findViewById(R.id.botonanocuatro);
+        botonanocuatro.setOnClickListener(this);
+
+
+        botonanocinco = findViewById(R.id.botonanocinco);
+        botonanocinco.setOnClickListener(this);
+
+
+        botonanomascinco = findViewById(R.id.botonanomas);
+        botonanomascinco.setOnClickListener(this);
+
+
+    }
+
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+
+            case R.id.botonanouno:
+
+                Intent intent11 = new Intent(this, AnoUno.class);
+                startActivity(intent11);
+                finish();
+                break;
+
+            case R.id.botonanodos:
+
+                Intent intent111 = new Intent(this, Anodos.class);
+                startActivity(intent111);
+                finish();
+                break;
+
+            case R.id.botonanotres:
+
+                Intent intent112 = new Intent(this, Anotres.class);
+                startActivity(intent112);
+                finish();
+                break;
+
+            case R.id.botonanocuatro:
+
+                Intent intent113 = new Intent(this, AnoCuatro.class);
+                startActivity(intent113);
+                finish();
+                break;
+
+            case R.id.botonanocinco:
+
+                Intent intent115 = new Intent(this, AnoCinco.class);
+                startActivity(intent115);
+                finish();
+                break;
+
+            case R.id.botonanomas:
+
+                Intent intent116 = new Intent(this, AnoMas.class);
+                startActivity(intent116);
+                finish();
+                break;
+
+
+        }
 
     }
 
@@ -72,7 +163,7 @@ public class Vacasiones extends AppCompatActivity {
                 finish();
                 break;
 
-            }
+        }
 
 
 
@@ -80,7 +171,8 @@ public class Vacasiones extends AppCompatActivity {
 
 
 
-        }
-
-
     }
+
+
+
+}

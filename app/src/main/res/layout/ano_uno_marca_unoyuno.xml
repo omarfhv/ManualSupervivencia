@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/botonprincipal"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+
+    <TableLayout
+        android:id="@+id/Tabla"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="3" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" MARCA DE INCLUSION 1 Y 1"
+            android:textSize="30dp"
+            android:textColor="#F8F4F4"
+            android:textStyle="bold" />
+
+
+
+
+        <TableRow
+            android:id="@+id/Cabecera"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/ColumnaAnio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5px"
+                android:text=" 2(M.C.3 ABRE) "
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/ColumnaCiudad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="5px"
+                android:text=" 3(M.C.6 CIERRA) "
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/SeparadorCabecera"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <FrameLayout
+                android:id="@+id/LineaCabecera"
+                android:layout_width="fill_parent"
+                android:layout_height="2px"
+                android:layout_span="6"
+                android:background="#FFFFFF" >
+            </FrameLayout>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Fila1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/Anio1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="15 DIAS A DISFRUTAR"
+                android:textColor="#210CD1"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/Cuidad1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="    10 DIAS A DISFRUTAR"
+
+                android:textColor="#210CD1"
+                android:textSize="18dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/Fila2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TableRow
+            android:id="@+id/Fila3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TableRow
+            android:id="@+id/Fila4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TableRow
+            android:id="@+id/Fila5"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <TableRow
+            android:id="@+id/Fila6"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+
+        <TableRow
+            android:id="@+id/Fila8"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+
+
+
+
+
+
+
+    </TableLayout>
+
+    <Button
+        android:id="@+id/botoncont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="onclick"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/botonprincipal"
+        android:text="      Continuar       "
+        android:textColor="#ffffff" />
+
+
+</LinearLayout>
+
