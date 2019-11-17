@@ -89,7 +89,7 @@ public class AnoUno extends AppCompatActivity implements View.OnClickListener {
             case R.id.botoninclucuatro:
                 final AlertDialog.Builder builder1 = new AlertDialog.Builder(AnoUno.this);
                 final LayoutInflater inflater11 = getLayoutInflater();
-                View vi1 = inflater11.inflate(R.layout.ano_marca_cuatroytres, null);
+                View vi1 = inflater11.inflate(R.layout.ano_uno_marcacuatro, null);
                 builder1.setView(vi1);
                 final AlertDialog dialog1 = builder1.create();
                 dialog1.setCancelable(true);
@@ -112,7 +112,7 @@ public class AnoUno extends AppCompatActivity implements View.OnClickListener {
             case R.id.botoninclunueve:
                 final AlertDialog.Builder builder2 = new AlertDialog.Builder(AnoUno.this);
                 final LayoutInflater inflater12 = getLayoutInflater();
-                View vi2 = inflater12.inflate(R.layout.ano_uno_marca_nueveycuatro, null);
+                View vi2 = inflater12.inflate(R.layout.ano_uno_marcanueve, null);
                 builder2.setView(vi2);
                 final AlertDialog dialog2 = builder2.create();
                 dialog2.setCancelable(true);
@@ -135,7 +135,7 @@ public class AnoUno extends AppCompatActivity implements View.OnClickListener {
             case R.id.botonincluuno:
                 final AlertDialog.Builder builder3 = new AlertDialog.Builder(AnoUno.this);
                 final LayoutInflater inflater13 = getLayoutInflater();
-                View vi3 = inflater13.inflate(R.layout.ano_uno_marca_unoyuno, null);
+                View vi3 = inflater13.inflate(R.layout.ano_uno_marcauno, null);
                 builder3.setView(vi3);
                 final AlertDialog dialog3 = builder3.create();
                 dialog3.setCancelable(true);
@@ -158,7 +158,7 @@ public class AnoUno extends AppCompatActivity implements View.OnClickListener {
             case R.id.botoninclucero:
                 final AlertDialog.Builder builder4 = new AlertDialog.Builder(AnoUno.this);
                 final LayoutInflater inflater14 = getLayoutInflater();
-                View vi4 = inflater14.inflate(R.layout.ano_uno_marca_cero, null);
+                View vi4 = inflater14.inflate(R.layout.ano_uno_marcacero, null);
                 builder4.setView(vi4);
                 final AlertDialog dialog4 = builder4.create();
                 dialog4.setCancelable(true);

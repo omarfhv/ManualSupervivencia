@@ -64,7 +64,7 @@ public class AnoCuatro extends AppCompatActivity implements View.OnClickListener
             case R.id.botonincludos:
                 final AlertDialog.Builder builder = new AlertDialog.Builder(AnoCuatro.this);
                 final LayoutInflater inflater1 = getLayoutInflater();
-                View vi = inflater1.inflate(R.layout.ano_uno_marcados_y_tres, null);
+                View vi = inflater1.inflate(R.layout.ano_cuatro_marcados, null);
                 builder.setView(vi);
                 final AlertDialog dialog = builder.create();
                 dialog.setCancelable(true);
@@ -89,7 +89,7 @@ public class AnoCuatro extends AppCompatActivity implements View.OnClickListener
             case R.id.botoninclucuatro:
                 final AlertDialog.Builder builder1 = new AlertDialog.Builder(AnoCuatro.this);
                 final LayoutInflater inflater11 = getLayoutInflater();
-                View vi1 = inflater11.inflate(R.layout.ano_marca_cuatroytres, null);
+                View vi1 = inflater11.inflate(R.layout.ano_cuatro_marcacuatro, null);
                 builder1.setView(vi1);
                 final AlertDialog dialog1 = builder1.create();
                 dialog1.setCancelable(true);
@@ -112,7 +112,7 @@ public class AnoCuatro extends AppCompatActivity implements View.OnClickListener
             case R.id.botoninclunueve:
                 final AlertDialog.Builder builder2 = new AlertDialog.Builder(AnoCuatro.this);
                 final LayoutInflater inflater12 = getLayoutInflater();
-                View vi2 = inflater12.inflate(R.layout.ano_uno_marca_nueveycuatro, null);
+                View vi2 = inflater12.inflate(R.layout.ano_cuatro_marcanueve, null);
                 builder2.setView(vi2);
                 final AlertDialog dialog2 = builder2.create();
                 dialog2.setCancelable(true);
@@ -135,7 +135,7 @@ public class AnoCuatro extends AppCompatActivity implements View.OnClickListener
             case R.id.botonincluuno:
                 final AlertDialog.Builder builder3 = new AlertDialog.Builder(AnoCuatro.this);
                 final LayoutInflater inflater13 = getLayoutInflater();
-                View vi3 = inflater13.inflate(R.layout.ano_uno_marca_unoyuno, null);
+                View vi3 = inflater13.inflate(R.layout.ano_cuatro_marcauno, null);
                 builder3.setView(vi3);
                 final AlertDialog dialog3 = builder3.create();
                 dialog3.setCancelable(true);
@@ -158,7 +158,7 @@ public class AnoCuatro extends AppCompatActivity implements View.OnClickListener
             case R.id.botoninclucero:
                 final AlertDialog.Builder builder4 = new AlertDialog.Builder(AnoCuatro.this);
                 final LayoutInflater inflater14 = getLayoutInflater();
-                View vi4 = inflater14.inflate(R.layout.ano_uno_marca_cero, null);
+                View vi4 = inflater14.inflate(R.layout.ano_cuatro_marcacero, null);
                 builder4.setView(vi4);
                 final AlertDialog dialog4 = builder4.create();
                 dialog4.setCancelable(true);
