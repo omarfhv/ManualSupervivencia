@@ -15,7 +15,7 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 
 public class MenuPrincipal extends AppCompatActivity implements View.OnClickListener {
 
-    LinearLayout botoncontrato,botonpase,botontxt, botonlicencias, botonvacaciones,
+    LinearLayout botoncontrato,botonpase,botontxt, botonrecuperar, botonvacaciones,
     botontestamento, botonfaltas, botoncaja, botonseguro, botonincapacidad, botonfestivos,
     botonreintegros, botoncontratos, botonjubilacion,botoncursos,botontabulador;
 
@@ -76,6 +76,8 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
         botoncontratos = findViewById(R.id.botoncontratos);
         botoncontratos.setOnClickListener(this);
 
+        botonrecuperar = findViewById(R.id.botonrecuperar);
+        botonrecuperar.setOnClickListener(this);
 
 
 
@@ -181,6 +183,14 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
                 startActivity(intentd);
                 finish();
                 break;
+
+            case R.id.botonrecuperar:
+
+                Intent intentda = new Intent(this, RecuperarContrasena.class);
+                startActivity(intentda);
+                finish();
+                break;
+
 
         }
 
