@@ -1,6 +1,7 @@
 package com.heisenbergtao.manualsupervivencia;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
@@ -11,6 +12,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
@@ -22,6 +24,10 @@ import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import static android.Manifest.permission.CALL_PHONE;
+import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
 public class RecuperarContrasena extends AppCompatActivity implements View.OnClickListener {
 
@@ -60,6 +66,8 @@ public class RecuperarContrasena extends AppCompatActivity implements View.OnCli
         botonsoportetecnico = findViewById(R.id.botonsoporte);
         botonsoportetecnico.setOnClickListener(this);
 
+        validaPermisos();
+
 
     }
 
@@ -83,60 +91,44 @@ public class RecuperarContrasena extends AppCompatActivity implements View.OnCli
 
             case R.id.botonsoporte:
 
-                intentllamada  = new Intent(Intent.ACTION_CALL, Uri.parse("tel"+"5555555"));
-                if (ActivityCompat.checkSelfPermission(RecuperarContrasena.this, Manifest.permission.CALL_PHONE) ==
-                        PackageManager.PERMISSION_GRANTED) {
-                    startActivity(intentllamada);
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:(0155)53331100"));
+                startActivity(intent);
+
+                break;
+        }
+
+
+    }
+
+
+    private void validaPermisos() {
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.M) {
+            return;
+        }
+
+        if ((checkSelfPermission(CALL_PHONE) == PackageManager.PERMISSION_GRANTED)) {
+            return;
+        }
+
+        if ((shouldShowRequestPermissionRationale(CALL_PHONE))) {
+            AlertDialog.Builder dialogo = new AlertDialog.Builder(RecuperarContrasena.this);
+            dialogo.setTitle("Permisos Desactivados");
+            dialogo.setMessage("Debe aceptar los permisos para el correcto funcionamiento de la App");
+
+            dialogo.setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                @RequiresApi(api = Build.VERSION_CODES.M)
+                @Override
+                public void onClick(DialogInterface dialogInterface, int i) {
+                    requestPermissions(new String[]{ CALL_PHONE}, 100);
                 }
-            else{
-                    explicarUsoPermiso();
-                    solicitarPermiso();
-
+            });
+            dialogo.show();
+        } else {
+            requestPermissions(new String[]{ CALL_PHONE}, 100);
         }
 
-        break;
-        }
-
-
-    }
-
-    private void explicarUsoPermiso(){
-        if (ActivityCompat.checkSelfPermission(RecuperarContrasena.this, Manifest.permission.CALL_PHONE) ==
-                PackageManager.PERMISSION_GRANTED){
-            alertDialogoBasico();
-            Toast.makeText(this, "PERMISO concedido", Toast.LENGTH_SHORT).show();
-
-        }
-    }
-
-    private void solicitarPermiso(){
-
-        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CALL_PHONE},SOLICITUD_PERMISO_CALL_PHONE);
-
-    }
-
-    @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-
-        if (requestCode == SOLICITUD_PERMISO_CALL_PHONE){
-            startActivity(intentllamada);
-        }
-
-        else {
-            Toast.makeText(this, "PERMISO DENEGADO", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    public  void alertDialogoBasico(){
-        AlertDialog.Builder builder=new AlertDialog.Builder(this);
-        builder.setMessage("SIN EL PERMISO LA LLAMADA NO PUEDE SER REALIZADA");
-        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-
-            }
-        });
     }
 
 
