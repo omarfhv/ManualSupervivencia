@@ -215,7 +215,7 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:background="@drawable/contra" />
+                        android:background="@drawable/olvi" />
 
                     <TextView
                         android:layout_width="wrap_content"
