@@ -2,13 +2,23 @@ package com.heisenbergtao.manualsupervivencia;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.LinearLayout;
 
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
@@ -18,9 +28,11 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
     LinearLayout botoncontrato,botonpase,botontxt, botonrecuperar, botonvacaciones,
     botontestamento, botonfaltas, botoncaja, botonseguro, botonincapacidad, botonfestivos,
     botonreintegros, botoncontratos, botonjubilacion,botoncursos,botontabulador;
+    SharedPreferences sharedPref;
 
     private AdView mAdView;
-
+    int califica;
+    InterstitialAd mInterstitialAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +44,25 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-9129010539844350/9620578226");
+        AdRequest adRequest1 = new AdRequest.Builder().build();
+        mInterstitialAd.loadAd(adRequest1);
+        mInterstitialAd.setAdListener(new AdListener());
 
+
+        sharedPref = getSharedPreferences("inicio", Context.MODE_PRIVATE);
+        califica = sharedPref.getInt("califica", 0);
+        dialogocalifica();
+        if (califica == 15) {
+            dialogocalifica();
+            califica = 0;
+        } else
+            califica++;
+
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt("califica", califica);
+        editor.apply();
 
         botoncontrato = findViewById(R.id.botoncontrato);
         botoncontrato.setOnClickListener(this);
@@ -85,6 +115,42 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
 
 
 
+    private void dialogocalifica() {
+
+        final AlertDialog.Builder builder = new AlertDialog.Builder(MenuPrincipal.this);
+        final LayoutInflater inflater = getLayoutInflater();
+        View vi = inflater.inflate(R.layout.dialogocalifica, null);
+        builder.setView(vi);
+        final AlertDialog dialog = builder.create();
+        dialog.setCancelable(true);
+        ColorDrawable dialogColor = new ColorDrawable(Color.GRAY);
+        dialogColor.setAlpha(0);
+        dialog.getWindow().setBackgroundDrawable(dialogColor);
+        Button botonsi = vi.findViewById(R.id.botonsi);
+        botonsi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentae4 = new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.heisenbergtao.manualsupervivencia"));
+                startActivity(intentae4);
+            }
+        });
+        Button botonno = vi.findViewById(R.id.botonno);
+        botonno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                    dialog.cancel();
+                }else{
+                    dialog.cancel();
+                }
+            }
+        });
+
+        dialog.show();
+
+    }
 
     @Override
     public void onClick(View view) {
