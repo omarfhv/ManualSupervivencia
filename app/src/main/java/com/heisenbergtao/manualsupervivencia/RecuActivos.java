@@ -63,7 +63,8 @@ public class RecuActivos extends AppCompatActivity {
     boolean quincenab, mesb, yearb;
     Button btndescargar;
     InterstitialAd mInterstitialAd;
-    static int[] id = new int[]{R.drawable.ins1, R.drawable.ins2, R.drawable.ins3, R.drawable.ins4, R.drawable.ins5, R.drawable.ins6, R.drawable.ins7};
+    static int[] id = new int[]{R.drawable.q, R.drawable.q1, R.drawable.q3, R.drawable.q4, R.drawable.q5, R.drawable.q6, R.drawable.q7, R.drawable.q8};
+    private AdView mAdView;
 
     @SuppressLint("SetJavaScriptEnabled")
     @Override
@@ -81,20 +82,13 @@ public class RecuActivos extends AppCompatActivity {
         imv = findViewById(R.id.imagevi);
 
 
+        mAdView = findViewById(R.id.adView9);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         progresbar = findViewById(R.id.pgbr);
         webview = findViewById(R.id.WebView);
-        mInterstitialAd = new InterstitialAd(this);
-        AdRequest adRequest1 = new AdRequest.Builder().build();
-        mInterstitialAd.loadAd(adRequest1);
-        mInterstitialAd.setAdListener(new AdListener(){
 
-            @Override
-            public void onAdClosed() {
-
-
-            }
-        });
         validaPermisos();
 
 
@@ -127,7 +121,7 @@ public class RecuActivos extends AppCompatActivity {
                     super.onPageFinished(view, url);
                     progresbar.setVisibility(View.GONE);
                     imv.setVisibility(View.GONE);
-                    setTitle("Descargar tarjeton");
+                    setTitle("Contraseña Activos");
                 }
 
 
@@ -143,7 +137,7 @@ public class RecuActivos extends AppCompatActivity {
 
             final AlertDialog.Builder builder = new AlertDialog.Builder(this);
             LayoutInflater inflater = getLayoutInflater();
-            View vi = inflater.inflate(R.layout.dialogocalifica, null);
+            View vi = inflater.inflate(R.layout.dialogoconfirm, null);
             TextView txtv = vi.findViewById(R.id.txtext);
             txtv.setText("No cuentas con conexion a internet ");
             builder.setView(vi);
@@ -264,7 +258,7 @@ public class RecuActivos extends AppCompatActivity {
                             super.onPageFinished(view, url);
                             progresbar.setVisibility(View.GONE);
                             imv.setVisibility(View.GONE);
-                            setTitle("Descargar tarjeton");
+                            setTitle("Contraseña Activos");
                         }
 
 
@@ -291,9 +285,6 @@ public class RecuActivos extends AppCompatActivity {
     }
 
 
-    private boolean rename(File from, File to) {
-        return from.getParentFile().exists() && from.exists() && from.renameTo(to);
-    }
 
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     static public int instruccionesbotones(ImageView imv, int num, boolean contador, Context context) {
@@ -347,10 +338,10 @@ public class RecuActivos extends AppCompatActivity {
                     if (cont[0] == 0) {
                         botonback.setVisibility(View.VISIBLE);
                     }
-                    if (cont[0] == 5) {
+                    if (cont[0] == 6) {
                         botonext.setBackground(getResources().getDrawable(R.drawable.btnchck));
                     }
-                    if (cont[0] == 6) {
+                    if (cont[0] == 7) {
                         SharedPreferences sharedPref;
                         sharedPref = getSharedPreferences(
                                 "instruccionesa", Context.MODE_PRIVATE);

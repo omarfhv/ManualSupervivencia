@@ -362,7 +362,7 @@
                 </LinearLayout>
 
                 <LinearLayout
-                    android:id="@+id/botonreintegros"
+                    android:id="@+id/botonlavadomanos"
                     android:layout_width="150dp"
                     android:layout_height="120dp"
                     android:layout_gravity="center"
@@ -375,13 +375,12 @@
                         android:layout_width="60dp"
                         android:layout_height="60dp"
                         android:layout_gravity="center"
-                        android:alpha="0"
-                        android:background="@drawable/reinte" />
+                        android:background="@drawable/manos" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="proximamente Reintegro y como leer el tarjeton"
+                        android:text="LAVADO DE MANOS"
                         android:textAlignment="center"
                         android:textColor="#ffffff"
                         android:textStyle="bold" />
@@ -411,6 +410,33 @@
                         android:textColor="#ffffff"
                         android:textStyle="bold" />
                 </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/botoncovid"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/boton_principal"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/hotel" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="HOTELES COVID"
+                        android:textAlignment="center"
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
 
             </LinearLayout>
 

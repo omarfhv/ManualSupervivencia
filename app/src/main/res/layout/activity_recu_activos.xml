@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".RecuActivos">
+    tools:context=".WbView">
 
     <WebView
         android:id="@+id/WebView"
@@ -27,11 +27,18 @@
         android:layout_centerHorizontal="true" />
 
 
-
-    <com.startapp.android.publish.ads.banner.Banner
-        android:id="@+id/startAppBanner"
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/admobmanual"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"/>
+
 </RelativeLayout>
+

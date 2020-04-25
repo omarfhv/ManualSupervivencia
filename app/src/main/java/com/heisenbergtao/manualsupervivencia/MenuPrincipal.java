@@ -27,7 +27,7 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
 
     LinearLayout botoncontrato,botonpase,botontxt, botonrecuperar, botonvacaciones,
     botontestamento, botonfaltas, botoncaja, botonseguro, botonincapacidad, botonfestivos,
-    botonreintegros, botoncontratos, botonjubilacion,botoncursos,botontabulador;
+    botonreintegros, botoncontratos, botonjubilacion,botoncursos,botontabulador,botonlavadomanos, botonhotel;
     SharedPreferences sharedPref;
 
     private AdView mAdView;
@@ -53,8 +53,8 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
 
         sharedPref = getSharedPreferences("inicio", Context.MODE_PRIVATE);
         califica = sharedPref.getInt("califica", 0);
-        dialogocalifica();
-        if (califica == 15) {
+
+        if (califica == 10) {
             dialogocalifica();
             califica = 0;
         } else
@@ -67,11 +67,15 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
         botoncontrato = findViewById(R.id.botoncontrato);
         botoncontrato.setOnClickListener(this);
 
+
         botontabulador = findViewById(R.id.botontabulador);
         botontabulador.setOnClickListener(this);
 
         botonpase = findViewById(R.id.botonpases);
         botonpase.setOnClickListener(this);
+
+        botonhotel = findViewById(R.id.botoncovid);
+        botonhotel.setOnClickListener(this);
 
         botontxt = findViewById(R.id.botontxt);
         botontxt.setOnClickListener(this);
@@ -97,8 +101,8 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
         botonfestivos = findViewById(R.id.botondias);
         botonfestivos.setOnClickListener(this);
 
-        botonreintegros = findViewById(R.id.botonreintegros);
-        botonreintegros.setOnClickListener(this);
+        botonlavadomanos = findViewById(R.id.botonlavadomanos);
+        botonlavadomanos.setOnClickListener(this);
 
         botonjubilacion = findViewById(R.id.botonjubilacion);
         botonjubilacion.setOnClickListener(this);
@@ -150,6 +154,11 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
 
         dialog.show();
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 
     @Override
@@ -254,6 +263,20 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
 
                 Intent intentda = new Intent(this, RecuperarContrasena.class);
                 startActivity(intentda);
+                finish();
+                break;
+
+            case R.id.botonlavadomanos:
+
+                Intent intentdaa = new Intent(this, LavadoDeManos.class);
+                startActivity(intentdaa);
+                finish();
+                break;
+
+            case R.id.botoncovid:
+
+                Intent intentdaja = new Intent(this, HotelCo.class);
+                startActivity(intentdaja);
                 finish();
                 break;
 

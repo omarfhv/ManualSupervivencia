@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.heisenbergtao.lavadodemano.CancionTusa">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EL LAVADO DE MANOS PERFECTO NO EXISTE..."
+        android:textSize="30dp"
+        android:gravity="center"
+        android:textColor="#03A9F4"
+        android:id="@+id/txttitulo"
+        />
+
+    <TextView
+        android:id="@+id/text_view_countdown"
+        android:layout_below="@+id/txttitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:text="00:00"
+        android:textColor="#673AB7"
+        android:textSize="30dp" />
+
+
+
+    <ImageView
+        android:id="@+id/secuencias"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/m1"
+        android:layout_below="@+id/text_view_countdown"
+        />
+
+
+    <Button
+        android:id="@+id/button_start_pause"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secuencias"
+        android:background="@drawable/boton_principal"
+        android:textColor="#ffff"
+        android:layout_marginVertical="10dp"
+        android:layout_marginHorizontal="50dp"
+        android:text="INICIO" />
+
+    <Button
+        android:id="@+id/button_reset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/secuencias"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginVertical="10dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/button_start_pause"
+        android:background="@drawable/boton_principal"
+        android:text="REINICIAR"
+        android:textColor="#ffff"
+        android:visibility="invisible"
+        tools:visibility="visible" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId= "@string/admobmanual">
+    </com.google.android.gms.ads.AdView>
+
+
+
+</RelativeLayout>

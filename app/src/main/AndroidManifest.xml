@@ -16,7 +16,8 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".InstrucionesRecuperaContrasena"></activity>
+        <activity android:name=".HotelCo"></activity>
+        <activity android:name=".LavadoDeManos" />
         <activity android:name=".MiFirebaseMessagingService" />
         <activity android:name=".MiFirebaseIntacedService" />
         <activity android:name=".RecuperaSoporte" />
