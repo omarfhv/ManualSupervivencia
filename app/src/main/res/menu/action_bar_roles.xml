@@ -6,16 +6,11 @@
 
     <item
         android:id="@+id/diagnostico1"
-        android:title="Roles"
+        android:title="Rol AÑO"
 
         yourapp:showAsAction="ifRoom" />
 
 
-    <item
-        android:id="@+id/agenda"
-        android:icon="@drawable/rol"
-        android:title="Agenda IMSS"
-        yourapp:showAsAction="ifRoom" />
 
     <item
         android:id="@+id/diagnostico"

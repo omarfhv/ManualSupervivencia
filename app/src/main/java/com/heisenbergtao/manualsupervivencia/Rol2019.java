@@ -34,7 +34,7 @@ public class Rol2019 extends AppCompatActivity {
 
         pdfView = findViewById(R.id.pdfView);
 
-        pdfView.fromAsset("rol.pdf").load();
+        pdfView.fromAsset("roles.pdf").load();
 
     }
     @Override

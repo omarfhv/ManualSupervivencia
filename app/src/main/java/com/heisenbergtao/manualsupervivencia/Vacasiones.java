@@ -157,11 +157,7 @@ public class Vacasiones extends AppCompatActivity implements View.OnClickListene
                 finish();
                 break;
 
-            case R.id.agenda:
-                Intent intent1121 = new Intent(this, Rol2019.class);
-                startActivity(intent1121);
-                finish();
-                break;
+
 
         }
 
