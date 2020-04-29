@@ -16,12 +16,12 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".HotelCo"></activity>
+        <activity android:name=".InfoCovid"></activity>
+        <activity android:name=".HotelCo" />
         <activity android:name=".LavadoDeManos" />
         <activity android:name=".MiFirebaseMessagingService" />
         <activity android:name=".MiFirebaseIntacedService" />
         <activity android:name=".RecuperaSoporte" />
-        <activity android:name=".SoporteTecnico" />
         <activity android:name=".RecuActivos" />
         <activity android:name=".RecuJubilados" />
         <activity android:name=".RecuperarContrasena" />
@@ -46,20 +46,16 @@
         <activity android:name=".Rol2019" />
         <activity android:name=".TramiteJubilacion" />
         <activity android:name=".Contratoss" />
-        <activity android:name=".Reintegros" />
         <activity android:name=".Festivos" />
         <activity android:name=".Incapacidades" />
         <activity android:name=".SeguroFacultativo" />
-        <activity android:name=".Caja" />
         <activity android:name=".Faltas" />
         <activity android:name=".PliegoTestamentario" />
         <activity android:name=".Vacasiones" />
-        <activity android:name=".Licencia" />
         <activity android:name=".TxtSustis" />
         <activity android:name=".Pases" />
         <activity android:name=".ContratoColectivo" />
         <activity android:name=".MenuPrincipal" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

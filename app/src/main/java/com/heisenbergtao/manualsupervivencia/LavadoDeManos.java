@@ -61,16 +61,17 @@ public class LavadoDeManos extends AppCompatActivity {
         }
         setContentView(R.layout.activity_lavado_de_manos);
 
-        final MediaPlayer mp = MediaPlayer.create(this, R.raw.negro);
+        final MediaPlayer mp = MediaPlayer.create(this, R.raw.lavas);
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {
             }
         });
-        mAdView = findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adView1);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-9129010539844350/9620578226");
         AdRequest adRequest1 = new AdRequest.Builder().build();
@@ -214,7 +215,7 @@ public class LavadoDeManos extends AppCompatActivity {
                 View vis = inflaters.inflate(R.layout.felicitacion, null);
                 builder.setView(vis);
                 final MediaPlayer negro;
-                negro =MediaPlayer.create(this, R.raw.negro);
+                negro =MediaPlayer.create(this, R.raw.negros);
 
                 final AlertDialog dialogo = builder.create();
                 dialogo.setCancelable(true);

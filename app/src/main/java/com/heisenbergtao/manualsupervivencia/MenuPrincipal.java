@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -27,12 +28,14 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
 
     LinearLayout botoncontrato,botonpase,botontxt, botonrecuperar, botonvacaciones,
     botontestamento, botonfaltas, botoncaja, botonseguro, botonincapacidad, botonfestivos,
-    botonreintegros, botoncontratos, botonjubilacion,botoncursos,botontabulador,botonlavadomanos, botonhotel;
+    botonreintegros, botoncontratos, botonjubilacion,botoncursos,botontabulador,botonlavadomanos, botonhotel,botoninfocovi;
     SharedPreferences sharedPref;
 
     private AdView mAdView;
     int califica;
     InterstitialAd mInterstitialAd;
+    ColorDrawable dialogColor;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,17 +47,17 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId("ca-app-pub-9129010539844350/9620578226");
         AdRequest adRequest1 = new AdRequest.Builder().build();
         mInterstitialAd.loadAd(adRequest1);
         mInterstitialAd.setAdListener(new AdListener());
 
-
         sharedPref = getSharedPreferences("inicio", Context.MODE_PRIVATE);
         califica = sharedPref.getInt("califica", 0);
 
-        if (califica == 10) {
+        if (califica == 8) {
             dialogocalifica();
             califica = 0;
         } else
@@ -67,6 +70,8 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
         botoncontrato = findViewById(R.id.botoncontrato);
         botoncontrato.setOnClickListener(this);
 
+        botoninfocovi = findViewById(R.id.botoninfocovi);
+        botoninfocovi.setOnClickListener(this);
 
         botontabulador = findViewById(R.id.botontabulador);
         botontabulador.setOnClickListener(this);
@@ -143,12 +148,11 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
             @Override
             public void onClick(View v) {
 
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                    dialog.cancel();
-                }else{
-                    dialog.cancel();
-                }
+                dialog.dismiss();
+                mInterstitialAd.show();
+
+
+
             }
         });
 
@@ -280,8 +284,60 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
                 finish();
                 break;
 
+            case R.id.botoninfocovi:
+
+                Intent intentdajaa = new Intent(this, InfoCovid.class);
+                startActivity(intentdajaa);
+                finish();
+                break;
+
 
         }
 
+
+
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK && event.getRepeatCount() == 0) {
+            final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            LayoutInflater inflater = getLayoutInflater();
+
+            View vi = inflater.inflate(R.layout.dialogconfirm, null);
+            builder.setView(vi);
+
+
+            final AlertDialog dialog = builder.create();
+            dialog.getWindow().setBackgroundDrawable(dialogColor);
+
+            //decidir despues si sera cancelable o no
+            dialog.setCancelable(false);
+            Button botonsi = vi.findViewById(R.id.botonsi);
+            botonsi.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.cancel();
+                            MenuPrincipal.super.onDestroy();
+                            System.exit(0);
+                        }
+                    }
+            );
+            Button botonno = vi.findViewById(R.id.botonno);
+            botonno.setOnClickListener(
+                    new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            dialog.cancel();
+
+                        }
+                    }
+            );
+            dialog.show();
+            //Metodos.dialogo( this, getLayoutInflater(), "¿seguro deseas salir de la aplicacion?", 0 );
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 }

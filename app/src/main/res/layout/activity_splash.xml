@@ -7,15 +7,7 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_margin="40dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Manual de Consulta IMSS"
-        android:textColor="#DF1414"
-        android:textSize="50dp"
-        android:textStyle="bold" />
+
 
     <ImageView
         android:id="@+id/imageView"
