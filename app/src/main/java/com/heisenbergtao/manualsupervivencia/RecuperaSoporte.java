@@ -93,7 +93,7 @@ public class RecuperaSoporte extends AppCompatActivity implements View.OnClickLi
             case R.id.botonllamada:
 
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:53331100"));
+                intent.setData(Uri.parse("tel:5553331100"));
                 startActivity(intent);
 
                 break;
