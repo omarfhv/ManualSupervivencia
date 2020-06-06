@@ -28,7 +28,7 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
 
     LinearLayout botoncontrato,botonpase,botontxt, botonrecuperar, botonvacaciones,
     botontestamento, botonfaltas, botoncaja, botonseguro, botonincapacidad, botonfestivos,
-    botonreintegros, botoncontratos, botonjubilacion,botoncursos,botontabulador,botonlavadomanos, botonhotel,botoninfocovi;
+    botonreintegros, botoncontratos, botonjubilacion,botoncursos,botontabulador,botonlavadomanos, botonhotel,botoninfo;
     SharedPreferences sharedPref;
 
     private AdView mAdView;
@@ -70,8 +70,8 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
         botoncontrato = findViewById(R.id.botoncontrato);
         botoncontrato.setOnClickListener(this);
 
-        botoninfocovi = findViewById(R.id.botoninfocovi);
-        botoninfocovi.setOnClickListener(this);
+        botoninfo = findViewById(R.id.botoninfo);
+        botoninfo.setOnClickListener(this);
 
         botontabulador = findViewById(R.id.botontabulador);
         botontabulador.setOnClickListener(this);
@@ -79,8 +79,6 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
         botonpase = findViewById(R.id.botonpases);
         botonpase.setOnClickListener(this);
 
-        botonhotel = findViewById(R.id.botoncovid);
-        botonhotel.setOnClickListener(this);
 
         botontxt = findViewById(R.id.botontxt);
         botontxt.setOnClickListener(this);
@@ -277,16 +275,11 @@ public class MenuPrincipal extends AppCompatActivity implements View.OnClickList
                 finish();
                 break;
 
-            case R.id.botoncovid:
 
-                Intent intentdaja = new Intent(this, HotelCo.class);
-                startActivity(intentdaja);
-                finish();
-                break;
 
-            case R.id.botoninfocovi:
+            case R.id.botoninfo:
 
-                Intent intentdajaa = new Intent(this, InfoCovid.class);
+                Intent intentdajaa = new Intent(this, Informacion.class);
                 startActivity(intentdajaa);
                 finish();
                 break;

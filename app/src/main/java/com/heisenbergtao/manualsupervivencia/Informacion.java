@@ -5,10 +5,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.Color;
@@ -27,19 +25,17 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
 
-public class InfoCovid extends AppCompatActivity {
+public class Informacion extends AppCompatActivity {
     ProgressBar progresbar;
     WebView webview;
     ImageView imv;
@@ -83,7 +79,7 @@ public class InfoCovid extends AppCompatActivity {
                 public void onProgressChanged(WebView view, int progress) {
                     // Activities and WebViews measure progress with different scales.
                     // The progress meter will automatically disappear when we reach 100%
-                    InfoCovid.this.setProgress(progress * 1000);
+                    Informacion.this.setProgress(progress * 1000);
                 }
             });
             webview.setWebViewClient(new WebViewClient() {
@@ -100,7 +96,7 @@ public class InfoCovid extends AppCompatActivity {
                     super.onPageFinished(view, url);
                     progresbar.setVisibility(View.GONE);
                     imv.setVisibility(View.GONE);
-                    setTitle("CORONAVIRUS");
+                    setTitle("Noticias IMSSTITUCIONALES");
                 }
 
 
@@ -131,11 +127,11 @@ public class InfoCovid extends AppCompatActivity {
                         @Override
                         public void onClick(View v) {
                             Intent intent = new Intent();
-                            intent.setClass(InfoCovid.this, InfoCovid.this.getClass());
+                            intent.setClass(Informacion.this, Informacion.this.getClass());
                             //llamamos a la actividad
-                            InfoCovid.this.startActivity(intent);
+                            Informacion.this.startActivity(intent);
                             //finalizamos la actividad actual
-                            InfoCovid.this.finish();
+                            Informacion.this.finish();
                         }
                     }
             );
@@ -171,7 +167,7 @@ public class InfoCovid extends AppCompatActivity {
 
         if ((shouldShowRequestPermissionRationale(READ_EXTERNAL_STORAGE)) ||
                 (shouldShowRequestPermissionRationale(WRITE_EXTERNAL_STORAGE))) {
-            AlertDialog.Builder dialogo = new AlertDialog.Builder(InfoCovid.this);
+            AlertDialog.Builder dialogo = new AlertDialog.Builder(Informacion.this);
             dialogo.setTitle("Permisos Desactivados");
             dialogo.setMessage("Debe aceptar los permisos para el correcto funcionamiento de la App");
 
@@ -218,7 +214,7 @@ public class InfoCovid extends AppCompatActivity {
                         public void onProgressChanged(WebView view, int progress) {
                             // Activities and WebViews measure progress with different scales.
                             // The progress meter will automatically disappear when we reach 100%
-                            InfoCovid.this.setProgress(progress * 1000);
+                            Informacion.this.setProgress(progress * 1000);
                         }
                     });
                     webview.setWebViewClient(new WebViewClient() {
@@ -235,7 +231,7 @@ public class InfoCovid extends AppCompatActivity {
                             super.onPageFinished(view, url);
                             progresbar.setVisibility(View.GONE);
                             imv.setVisibility(View.GONE);
-                            setTitle("CORONAVIRUS");
+                            setTitle("Noticias IMSSTITUCIONALES");
                         }
 
 

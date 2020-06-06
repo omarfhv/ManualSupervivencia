@@ -16,8 +16,7 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".InfoCovid"></activity>
-        <activity android:name=".HotelCo" />
+        <activity android:name=".Informacion"></activity>
         <activity android:name=".LavadoDeManos" />
         <activity android:name=".MiFirebaseMessagingService" />
         <activity android:name=".MiFirebaseIntacedService" />
